@@ -1,0 +1,148 @@
+/* General styles for all screen sizes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure that the content covers the entire viewport height */
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent header and footer from shrinking */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;/* Allow sections to wrap for tablet and desktop */
+}
+
+section {
+    padding: 20px;
+    box-sizing: border-box;
+    flex-grow: 1; /* Equal width for all sections */
+}
+
+/* Responsive styles for different screen sizes */
+/* Mobile layout */
+@media screen and (max-width: 768px) {
+   /* Header */
+header {
+    width: 100%;
+    background-color: rgb(220, 53, 81); /* Pink background color for the header */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    
+    bottom: 0;
+    background-color: rgb(25, 138, 176); /* Light blue background color for the footer */
+}
+
+/* Content */
+.content {
+    width: 100%;
+    background-color: white; /* White background color for the content */
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 100%;
+    background-color: rgb(187, 187, 29); /* Light yellow background color for the left sidebar */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 100%;
+    background-color: rgb(27, 196, 27); /* Light green background color for the right sidebar */
+}
+
+}
+
+/* Tablet layout */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        width: 100%; 
+        background-color: rgb(220, 53, 81);
+        /* Full width for header and footer on tablet */
+    }
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: rgb(25, 138, 176);
+    }
+    
+
+    .content {
+        width: 100%;
+        order: 1; 
+        background-color: white;/* Full width for main content on tablet */
+    }
+
+    .left-sidebar {
+        width: 50%; 
+        text-align:left ;/* Split left and right sidebars */
+        order: 2;
+        background-color: rgb(187, 187, 29);
+    }
+     .right-sidebar {
+        width: 50%; 
+        text-align:right ;
+        order:3;
+        background-color: rgb(27, 196, 27);/* Split left and right sidebars */
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    header {
+        width: 100%;
+        background-color: rgb(220, 53, 81);
+    }
+
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .left-sidebar {
+        width:25%;
+        order:1;
+        
+        background-color: rgb(187, 187, 29);
+    }
+    .right-sidebar {
+        width: 25%;
+        order:3;
+        
+        background-color: rgb(27, 196, 27);
+    }
+    
+    .content {
+        width: 50%;
+        order:2;
+        background-color: white;
+    }
+    
+   
+    
+    
+    
+    
+
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: rgb(25, 138, 176);
+    }
+
+    
+}
